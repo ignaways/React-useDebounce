@@ -7,8 +7,10 @@ function App() {
   const [search, setSearch] = useState('');
   const [tempData, setTempData] = useState([]);
   const { data, isLoading, isError } = useFetch('https://my-json-server.typicode.com/ignaways/fake-api-anime/data');
-
+  
   const searchHandler = e => setSearch(e.target.value);
+
+  // use Debounce to prevent unnecessary API calls
   const debouncedSearch = useDebounce(search, 1000);
 
   useEffect(() => {
@@ -24,10 +26,10 @@ function App() {
 
   return (
     <div className="container__main">
-
       <input
         className='content__search'
-        type="text" placeholder={'search here...'}
+        type="text" 
+        placeholder={'search here...'}
         onChange={searchHandler}
       />
 
