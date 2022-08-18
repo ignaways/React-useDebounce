@@ -3,13 +3,13 @@
   width: 30%;
 }
 
-.pirates__text{
+.content__text{
   text-align: center;
   font-size: .90rem;
   font-family: roboto, Geneva, Tahoma, sans-serif;
 }
 
-.pirates__search{
+.content__search{
   margin: 0 auto 1em;
   width: 100%;
   padding: .5em;
